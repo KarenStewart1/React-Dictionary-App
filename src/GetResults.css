@@ -1,3 +1,10 @@
 .GetResults h2 {
   padding-right: 10px;
 }
+.GetResults button {
+  background-color: purple;
+  border-radius: 40px;
+  font-size: 25px;
+  padding: 0 20px;
+  color: white;
+}

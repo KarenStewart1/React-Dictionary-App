@@ -12,7 +12,9 @@ export default function GetResults(props) {
               <h2 className="word d-flex text-capitalize">{props.data.word}</h2>
               <span className="phonetics">{props.data.phonetic}</span>
             </div>
-            <button>Listen</button>
+            <button>
+              <i class="far fa-play-circle"></i>
+            </button>
           </div>
         </div>
         <div className="definitions ">
