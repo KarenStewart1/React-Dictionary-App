@@ -1,6 +1,7 @@
 import React from "react";
 import Meaning from "./Meaning";
 import "./GetResults.css";
+import Images from "./Images";
 
 export default function GetResults(props) {
   if (props.data) {
@@ -28,6 +29,7 @@ export default function GetResults(props) {
             );
           })}
         </div>
+        <Images />
       </div>
     );
   } else {
