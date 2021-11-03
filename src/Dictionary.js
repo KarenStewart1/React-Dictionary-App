@@ -32,22 +32,22 @@ export default function Dictionary() {
     setSearchWord(event.target.value);
   }
 
-  return (
-    <div className="dictionary">
-      <form className="search-form form-control-lg" onSubmit={handleSubmit}>
-        <input
-          type="search"
-          placeholder="Search for a word"
-          onChange={updateSearchWord}
-        />
-      </form>
-      <ShowResult data={definitionInfo} />
-    </div>
-  );
+    return (
+      <div className="dictionary">
+        <form className="search-form form-control-lg" onSubmit={handleSubmit}>
+          <input
+            type="search"
+            placeholder="Search for a word"
+            onChange={updateSearchWord}
+          />
           <input
             value="Search"
             className="shadow-sm search-button"
             type="submit"
           />
+        </form>
         <ShowResult data={definitionInfo} />
+      </div>
+    );
+  }
 }
