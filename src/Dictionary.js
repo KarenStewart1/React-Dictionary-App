@@ -7,17 +7,21 @@ export default function Dictionary() {
   let [searchWord, setSearchWord] = useState(null);
   let [definitionInfo, setDefinitionInfo] = useState(null);
 
-  function handleResponse(response) {
-    setDefinitionInfo(response);
-    console.log(definitionInfo);
-    return null;
-  }
-
   function search() {
     //   documentation at https://dictionaryapi.dev/
     let url = `https://api.dictionaryapi.dev/api/v2/entries/en/${searchWord}`;
     axios.get(url).then(handleResponse);
     return null;
+
+  function handleResponse(response) {
+    setDefinitionInfo({
+      word: response.data[0].word,
+      phonetic: response.data[0].phonetic,
+      partOfSpeech: response.data[0].meanings[0].partOfSpeech,
+      definition: response.data[0].meanings[0].definitions[0].definition,
+      synonym: response.data[0].meanings[0].definitions[0].synonyms[0],
+      example: response.data[0].meanings[0].definitions[0].example,
+    });
   }
 
   function handleSubmit(event) {
