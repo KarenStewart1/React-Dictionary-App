@@ -4,18 +4,19 @@ import axios from "axios";
 import ShowResult from "./ShowResult";
 
 export default function Dictionary() {
-  let [definitionInfo, setDefinitionInfo] = useState(null);
   const [searchWord, setSearchWord] = useState(null);
+  const [definitionInfo, setDefinitionInfo] = useState({ ready: false });
 
   function search() {
     //   documentation at https://dictionaryapi.dev/
     let url = `https://api.dictionaryapi.dev/api/v2/entries/en/${searchWord}`;
     axios.get(url).then(handleResponse);
-    return null;
+    return "hi";
   }
 
   function handleResponse(response) {
     setDefinitionInfo({
+      ready: true,
       word: response.data[0].word,
       phonetic: response.data[0].phonetic,
       partOfSpeech: response.data[0].meanings[0].partOfSpeech,
@@ -32,7 +33,7 @@ export default function Dictionary() {
   function updateSearchWord(event) {
     setSearchWord(event.target.value);
   }
-
+  if (definitionInfo.ready) {
     return (
       <div className="dictionary">
         <form className="search-form form-control-lg" onSubmit={handleSubmit}>
@@ -50,5 +51,9 @@ export default function Dictionary() {
         <ShowResult data={definitionInfo} />
       </div>
     );
+  } else {
+    let url = `https://api.dictionaryapi.dev/api/v2/entries/en/${searchWord}`;
+    axios.get(url).then(handleResponse);
+    return "Loading...";
   }
 }
