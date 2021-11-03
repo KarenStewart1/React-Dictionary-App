@@ -1,29 +1,21 @@
 import React, { useState } from "react";
 import "./Dictionary.css";
 import axios from "axios";
-import ShowResult from "./ShowResult";
+import GetResults from "./GetResults";
 
 export default function Dictionary() {
-  const [searchWord, setSearchWord] = useState(null);
-  const [definitionInfo, setDefinitionInfo] = useState({ ready: false });
+  const [searchWord, setSearchWord] = useState("Jump");
+  const [definitionInfo, setDefinitionInfo] = useState(null);
 
   function search() {
     //   documentation at https://dictionaryapi.dev/
     let url = `https://api.dictionaryapi.dev/api/v2/entries/en/${searchWord}`;
     axios.get(url).then(handleResponse);
-    return "hi";
+    return null;
   }
 
   function handleResponse(response) {
-    setDefinitionInfo({
-      ready: true,
-      word: response.data[0].word,
-      phonetic: response.data[0].phonetic,
-      partOfSpeech: response.data[0].meanings[0].partOfSpeech,
-      definition: response.data[0].meanings[0].definitions[0].definition,
-      synonym: response.data[0].meanings[0].definitions[0].synonyms[0],
-      example: response.data[0].meanings[0].definitions[0].example,
-    });
+    setDefinitionInfo(response.data[0]);
   }
 
   function handleSubmit(event) {
@@ -33,27 +25,26 @@ export default function Dictionary() {
   function updateSearchWord(event) {
     setSearchWord(event.target.value);
   }
-  if (definitionInfo.ready) {
-    return (
-      <div className="dictionary">
-        <form className="search-form form-control-lg" onSubmit={handleSubmit}>
-          <input
-            type="search"
-            placeholder="Search for a word"
-            onChange={updateSearchWord}
-          />
-          <input
-            value="Search"
-            className="shadow-sm search-button"
-            type="submit"
-          />
-        </form>
-        <ShowResult data={definitionInfo} />
-      </div>
-    );
-  } else {
-    let url = `https://api.dictionaryapi.dev/api/v2/entries/en/${searchWord}`;
-    axios.get(url).then(handleResponse);
-    return "Loading...";
-  }
+
+  return (
+    <div className="dictionary">
+      <form
+        className="form-control-lg d-flex justify-content-center"
+        onSubmit={handleSubmit}
+      >
+        <input
+          type="search"
+          placeholder="Search for a word"
+          onChange={updateSearchWord}
+          className="input-box"
+        />
+        <input
+          value="Search"
+          className="shadow-sm search-button"
+          type="submit"
+        />
+      </form>
+      <GetResults data={definitionInfo} />
+    </div>
+  );
 }

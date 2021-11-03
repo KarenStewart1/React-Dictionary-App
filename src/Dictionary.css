@@ -1,3 +1,7 @@
+.dictionary .input-box {
+  width: 35%;
+}
+
 .dictionary .search-button {
   border-width: 1px;
   color: #ffffff;
