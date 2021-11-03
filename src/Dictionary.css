@@ -1,13 +1,16 @@
-.dictionary button {
+.dictionary .search-button {
+  border-width: 1px;
+  color: #ffffff;
+  border-color: transparent;
   background-color: purple;
-  border-color: purple;
-  padding: 6px 15px;
+  padding: 4px 15px 4px 15px;
+  border-radius: 7px;
   margin-left: 10px;
-  vertical-align: top;
+  transition: all 200ms ease-in-out;
 }
 
-.dictionary button:hover {
+.dictionary .search-button:hover {
   background-color: white;
   border-color: purple;
-  color: black;
+  color: purple;
 }

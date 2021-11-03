@@ -22,7 +22,6 @@ export default function Dictionary() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    console.log(searchWord);
     search();
   }
   function updateSearchWord(event) {
@@ -37,11 +36,13 @@ export default function Dictionary() {
           placeholder="Search for a word"
           onChange={updateSearchWord}
         />
-        <button className="btn btn-primary" type="submit">
-          Search
-        </button>
       </form>
       <ShowResult data={definitionInfo} />
     </div>
   );
+          <input
+            value="Search"
+            className="shadow-sm search-button"
+            type="submit"
+          />
 }
