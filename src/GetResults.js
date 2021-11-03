@@ -6,15 +6,22 @@ export default function GetResults(props) {
   if (props.data) {
     return (
       <div className="GetResults">
-        <div className="d-flex">
-          <h2 className="word text-capitalize">{props.data.word}</h2>
-          <span className="phonetics">{props.data.phonetic}</span>
+        <div className="card">
+          <div className="card-body">
+            <div className="first-box d-flex">
+              <h2 className="word d-flex text-capitalize">{props.data.word}</h2>
+              <span className="phonetics">{props.data.phonetic}</span>
+            </div>
+            <button>Listen</button>
+          </div>
         </div>
-        <div className="definitions">
+        <div className="definitions ">
           {props.data.meanings.map(function (meaning, index) {
             return (
-              <div key={index}>
-                <Meaning meaning={meaning} />
+              <div key={index} className="card shadow-sm">
+                <div className="card-body">
+                  <Meaning meaning={meaning} />
+                </div>
               </div>
             );
           })}

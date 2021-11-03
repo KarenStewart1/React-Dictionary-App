@@ -28,22 +28,26 @@ export default function Dictionary() {
 
   return (
     <div className="dictionary">
-      <form
-        className="form-control-lg d-flex justify-content-center"
-        onSubmit={handleSubmit}
-      >
-        <input
-          type="search"
-          placeholder="Search for a word"
-          onChange={updateSearchWord}
-          className="input-box"
-        />
-        <input
-          value="Search"
-          className="shadow-sm search-button"
-          type="submit"
-        />
-      </form>
+      <div className="card shadow-sm">
+        <div className="card-body">
+          <form
+            className="form-control-lg d-flex justify-content-center"
+            onSubmit={handleSubmit}
+          >
+            <input
+              type="search"
+              placeholder="Search for a word"
+              onChange={updateSearchWord}
+              className="input-box"
+            />
+            <input
+              value="Search"
+              className="shadow-sm search-button"
+              type="submit"
+            />
+          </form>
+        </div>
+      </div>
       <GetResults data={definitionInfo} />
     </div>
   );
