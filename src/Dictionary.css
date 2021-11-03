@@ -1,0 +1,13 @@
+.dictionary button {
+  background-color: purple;
+  border-color: purple;
+  padding: 6px 15px;
+  margin-left: 10px;
+  vertical-align: top;
+}
+
+.dictionary button:hover {
+  background-color: white;
+  border-color: purple;
+  color: black;
+}
