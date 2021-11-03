@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Dictionary.css";
-import ShowResult from "./ShowResult";
 import axios from "axios";
+import ShowResult from "./ShowResult";
 
 export default function Dictionary() {
   let [searchWord, setSearchWord] = useState(null);
@@ -49,4 +49,5 @@ export default function Dictionary() {
             className="shadow-sm search-button"
             type="submit"
           />
+        <ShowResult data={definitionInfo} />
 }
