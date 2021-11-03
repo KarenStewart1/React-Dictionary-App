@@ -4,14 +4,15 @@ import axios from "axios";
 import ShowResult from "./ShowResult";
 
 export default function Dictionary() {
-  let [searchWord, setSearchWord] = useState(null);
   let [definitionInfo, setDefinitionInfo] = useState(null);
+  const [searchWord, setSearchWord] = useState(null);
 
   function search() {
     //   documentation at https://dictionaryapi.dev/
     let url = `https://api.dictionaryapi.dev/api/v2/entries/en/${searchWord}`;
     axios.get(url).then(handleResponse);
     return null;
+  }
 
   function handleResponse(response) {
     setDefinitionInfo({
