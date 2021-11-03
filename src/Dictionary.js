@@ -1,15 +1,32 @@
 import React, { useState } from "react";
 import "./Dictionary.css";
+import ShowResult from "./ShowResult";
+import axios from "axios";
 
 export default function Dictionary() {
-  let [word, setWord] = useState(null);
+  let [searchWord, setSearchWord] = useState(null);
+  let [definitionInfo, setDefinitionInfo] = useState(null);
+
+  function handleResponse(response) {
+    setDefinitionInfo(response);
+    console.log(definitionInfo);
+    return null;
+  }
+
+  function search() {
+    //   documentation at https://dictionaryapi.dev/
+    let url = `https://api.dictionaryapi.dev/api/v2/entries/en/${searchWord}`;
+    axios.get(url).then(handleResponse);
+    return null;
+  }
 
   function handleSubmit(event) {
     event.preventDefault();
-    alert(word);
+    console.log(searchWord);
+    search();
   }
-  function updateWord(event) {
-    setWord(event.target.value);
+  function updateSearchWord(event) {
+    setSearchWord(event.target.value);
   }
 
   return (
@@ -18,12 +35,13 @@ export default function Dictionary() {
         <input
           type="search"
           placeholder="Search for a word"
-          onChange={updateWord}
+          onChange={updateSearchWord}
         />
         <button className="btn btn-primary" type="submit">
           Search
         </button>
       </form>
+      <ShowResult data={definitionInfo} />
     </div>
   );
 }
