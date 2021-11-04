@@ -3,6 +3,7 @@
 }
 .App h1 {
   font-family: var(--primary-font);
+  font-size: 50px;
   margin-top: 60px;
   margin-bottom: 40px;
   text-align: center;
