@@ -1,17 +1,21 @@
+:root {
+  --primary-font: "Roboto", sans-serif;
+}
 .App h1 {
-  margin-top: 40px;
+  font-family: var(--primary-font);
+  margin-top: 60px;
   margin-bottom: 40px;
   text-align: center;
 }
+.card {
+  border-radius: 8px;
+  box-shadow: 0 30px 50px rgb(65 50 100 / 8%);
+  display: flex;
+  margin: 20px auto;
+  max-width: 70%;
+  padding: 40px 40px;
+}
 footer {
   font-size: small;
-}
-.card {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-body {
-  background-color: lightblue;
+  text-align: center;
 }

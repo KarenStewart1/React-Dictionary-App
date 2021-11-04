@@ -11,8 +11,10 @@ export default function GetResults(props) {
         <div className="card">
           <div className="card-body">
             <div className="first-box d-flex">
-              <h2 className="word d-flex text-capitalize">{props.data.word}</h2>
-              <span className="phonetics">{props.data.phonetic}</span>
+              <h2 className="d-flex text-capitalize">{props.data.word}</h2>
+              <span className="phonetics text-muted">
+                {props.data.phonetic}
+              </span>
             </div>
             <Audio audio={props.data.phonetics[0].audio} />
           </div>
@@ -20,7 +22,7 @@ export default function GetResults(props) {
         <div className="definitions ">
           {props.data.meanings.map(function (meaning, index) {
             return (
-              <div key={index} className="card shadow-sm">
+              <div key={index} className="card">
                 <div className="card-body">
                   <Meaning meaning={meaning} />
                 </div>

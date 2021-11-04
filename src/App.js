@@ -1,5 +1,6 @@
 import "./App.css";
 import Dictionary from "./Dictionary";
+import "./Audio.css";
 
 function App() {
   return (
@@ -8,14 +9,22 @@ function App() {
         <h1>Dictionary</h1>
         <Dictionary />
         <footer className="mt-5">
+          This project was coded by{" "}
+          <a
+            href="https://linkedin.com/in/karenstewartnl"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Karen Stewart
+          </a>{" "}
+          and is{" "}
           <a
             href="https://github.com/KarenStewart1/React-Dictionary-App"
             target="_blank"
             rel="noreferrer"
           >
-            Open-source code
-          </a>{" "}
-          by Karen Stewart
+            open-sourced on Github
+          </a>
         </footer>
       </div>
     </div>

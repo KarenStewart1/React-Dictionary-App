@@ -28,7 +28,7 @@ export default function Dictionary() {
 
   return (
     <div className="dictionary">
-      <div className="card shadow-sm">
+      <div className="card">
         <div className="card-body">
           <form
             className="form-control-lg d-flex justify-content-center"

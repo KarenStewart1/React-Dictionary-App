@@ -1,12 +1,20 @@
-.Meaning .part-of-speech {
-  font-size: 20px;
-  margin-bottom: 20px;
-  margin-top: 20px;
+.Meaning {
+  font-family: var(--primary-font);
 }
 
-.example,
-.definition,
-.synonyms {
-  margin-top: 10px;
-  margin-bottom: 30px;
+.Meaning .part-of-speech {
+  color: #f76b8a;
+  font-family: var(--primary-font);
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.Meaning .definition {
+  margin-bottom: 10px;
+  margin-top: 50px;
+}
+
+.Meaning .example {
+  margin-bottom: 10px;
 }

@@ -1,13 +1,8 @@
 .GetResults h2 {
+  font-family: var(--primary-font);
+  font-size: 38px;
   padding-right: 10px;
 }
-.GetResults button {
-  background-color: purple;
-  border-color: black;
-  box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 8%);
-  border-radius: 40px;
-  color: white;
-  font-size: 25px;
-  padding: 0 20px;
-  margin-top: 10px;
+.GetResults .phonetics {
+  font-family: var(--primary-font);
 }
