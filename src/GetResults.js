@@ -2,6 +2,7 @@ import React from "react";
 import Meaning from "./Meaning";
 import "./GetResults.css";
 import Images from "./Images";
+import Audio from "./Audio";
 
 export default function GetResults(props) {
   if (props.data) {
@@ -13,9 +14,7 @@ export default function GetResults(props) {
               <h2 className="word d-flex text-capitalize">{props.data.word}</h2>
               <span className="phonetics">{props.data.phonetic}</span>
             </div>
-            <button>
-              <i class="far fa-play-circle"></i>
-            </button>
+            <Audio audio={props.data.phonetics[0].audio} />
           </div>
         </div>
         <div className="definitions ">
