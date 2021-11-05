@@ -15,6 +15,7 @@ export default function Images(props) {
                       href={photos.src.original}
                       target="_blank"
                       rel="noreferrer"
+                      title="go to original image"
                     >
                       <img
                         src={photos.src.landscape}

@@ -51,7 +51,6 @@ export default function Dictionary(props) {
             >
               <input
                 type="search"
-                placeholder="Search for a word"
                 onChange={updateSearchWord}
                 className="input-box"
                 autoFocus="on"
