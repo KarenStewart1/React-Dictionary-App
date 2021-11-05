@@ -6,11 +6,20 @@ import GetResults from "./GetResults";
 export default function Dictionary() {
   const [searchWord, setSearchWord] = useState("Jump");
   const [definitionInfo, setDefinitionInfo] = useState(null);
+  const [photos, setPhotos] = useState(null);
+  let imageApiKey = `563492ad6f91700001000001edd29bc9babf4aca9c6ccfe42977685f`;
+  let imageUrl = `https://api.pexels.com/v1/search?query=${searchWord}&per_page=9`;
+  let headers = { Authorization: `Bearer ${imageApiKey}` };
+
+  function handleImageResponse(response) {
+    setPhotos(response.data.photos);
+  }
 
   function search() {
     //   documentation at https://dictionaryapi.dev/
     let url = `https://api.dictionaryapi.dev/api/v2/entries/en/${searchWord}`;
     axios.get(url).then(handleResponse);
+    axios.get(imageUrl, { headers: headers }).then(handleImageResponse);
     return null;
   }
 
@@ -49,7 +58,7 @@ export default function Dictionary() {
           </form>
         </div>
       </div>
-      <GetResults data={definitionInfo} />
+      <GetResults data={definitionInfo} imageData={photos} />
     </div>
   );
 }

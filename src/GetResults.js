@@ -30,7 +30,7 @@ export default function GetResults(props) {
             );
           })}
         </div>
-        <Images />
+        <Images imageData={props.imageData} />
       </div>
     );
   } else {
