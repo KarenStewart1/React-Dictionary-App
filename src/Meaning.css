@@ -17,3 +17,13 @@
 .Meaning .example {
   margin-bottom: 10px;
 }
+
+@media (max-width: 600px) {
+  .Meaning .definition,
+  .Meaning .example {
+    font-size: 14px;
+  }
+  .Meaning .definition {
+    margin-top: 25px;
+  }
+}

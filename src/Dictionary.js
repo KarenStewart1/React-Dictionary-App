@@ -44,7 +44,7 @@ export default function Dictionary(props) {
     return (
       <div className="Dictionary">
         <div className="card">
-          <div className="card-body">
+          <div className="card-body form-card-body">
             <form
               className="form-control-lg d-flex justify-content-center"
               onSubmit={handleSubmit}
