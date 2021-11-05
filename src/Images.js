@@ -10,11 +10,10 @@ export default function Images(props) {
             <div className="row">
               {props.imageData.map(function (photos, index) {
                 return (
-                  <div className="col-4">
+                  <div className="col-4" key={index}>
                     <img
                       src={photos.src.landscape}
                       className="img-fluid photos"
-                      key={index}
                       alt="word searched"
                     />
                   </div>
