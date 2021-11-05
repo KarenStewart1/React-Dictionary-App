@@ -1,6 +1,10 @@
 :root {
   --primary-font: "Roboto", sans-serif;
 }
+.App {
+  font-family: var(--primary-font);
+}
+
 .App h1 {
   font-family: var(--primary-font);
   font-size: 50px;

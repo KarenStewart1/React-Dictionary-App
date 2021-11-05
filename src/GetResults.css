@@ -1,8 +1,8 @@
 .GetResults h2 {
-  font-family: var(--primary-font);
   font-size: 38px;
   padding-right: 10px;
 }
+
 .GetResults .phonetics {
-  font-family: var(--primary-font);
+  font-size: 20px;
 }

@@ -45,6 +45,7 @@ export default function Dictionary(props) {
       <div className="Dictionary">
         <div className="card">
           <div className="card-body form-card-body">
+            <h2>What word would you like to search for?</h2>
             <form
               className="form-control-lg d-flex justify-content-center"
               onSubmit={handleSubmit}
