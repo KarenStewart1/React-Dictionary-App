@@ -4,19 +4,11 @@
 .App h1 {
   font-family: var(--primary-font);
   font-size: 50px;
-  margin-top: 60px;
   margin-bottom: 40px;
+  margin-top: 60px;
   text-align: center;
 }
-.card {
-  border-radius: 8px;
-  box-shadow: 0 30px 50px rgb(65 50 100 / 8%);
-  display: flex;
-  margin: 20px auto;
-  max-width: 70%;
-  padding: 40px 40px;
-}
-footer {
+.App footer {
   font-size: small;
   text-align: center;
 }

@@ -1,8 +1,17 @@
-.dictionary .input-box {
+.Dictionary .card {
+  border-radius: 8px;
+  box-shadow: 0 30px 50px rgb(65 50 100 / 8%);
+  display: flex;
+  margin: 20px auto;
+  max-width: 70%;
+  padding: 40px 40px;
+}
+
+.Dictionary .input-box {
   width: 50%;
 }
 
-.dictionary .search-button {
+.Dictionary .search-button {
   background-color: #f76b8a;
   border-color: transparent;
   border-radius: 7px;
@@ -14,7 +23,7 @@
   transition: all 200ms ease-in-out;
 }
 
-.dictionary .search-button:hover {
+.Dictionary .search-button:hover {
   background-color: white;
   border-color: #f76b8a;
   color: #f76b8a;

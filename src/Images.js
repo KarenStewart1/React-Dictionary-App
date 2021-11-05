@@ -11,11 +11,17 @@ export default function Images(props) {
               {props.imageData.map(function (photos, index) {
                 return (
                   <div className="col-4" key={index}>
-                    <img
-                      src={photos.src.landscape}
-                      className="img-fluid photos"
-                      alt="word searched"
-                    />
+                    <a
+                      href={photos.src.original}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <img
+                        src={photos.src.landscape}
+                        className="img-fluid photos"
+                        alt="word searched"
+                      />
+                    </a>
                   </div>
                 );
               })}

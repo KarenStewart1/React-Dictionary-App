@@ -4,7 +4,7 @@ import axios from "axios";
 import GetResults from "./GetResults";
 
 export default function Dictionary() {
-  const [searchWord, setSearchWord] = useState("Jump");
+  const [searchWord, setSearchWord] = useState(null);
   const [definitionInfo, setDefinitionInfo] = useState(null);
   const [photos, setPhotos] = useState(null);
   let imageApiKey = `563492ad6f91700001000001edd29bc9babf4aca9c6ccfe42977685f`;
@@ -36,7 +36,7 @@ export default function Dictionary() {
   }
 
   return (
-    <div className="dictionary">
+    <div className="Dictionary">
       <div className="card">
         <div className="card-body">
           <form

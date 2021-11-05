@@ -1,4 +1,4 @@
-.audio-button {
+.Audio .audio-button {
   background-color: #f76b8a;
   border-color: #f76b8a;
   border-radius: 40px;
@@ -9,8 +9,7 @@
   padding: 0 25px;
   transition: 200ms all ease-in-out;
 }
-
-.audio-button:hover {
+.Audio .audio-button:hover {
   background-color: white;
   color: #f76b8a;
 }

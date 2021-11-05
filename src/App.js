@@ -8,7 +8,7 @@ function App() {
       <div className="container">
         <h1>Dictionary </h1>
         <Dictionary />
-        <footer className="mt-5">
+        <footer>
           This project was coded by{" "}
           <a
             href="https://linkedin.com/in/karenstewartnl"

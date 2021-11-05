@@ -11,7 +11,7 @@ export default function GetResults(props) {
         <div className="card">
           <div className="card-body">
             <div className="first-box d-flex">
-              <h2 className="d-flex text-capitalize">{props.data.word}</h2>
+              <h2 className="d-flex">{props.data.word}</h2>
               <span className="phonetics text-muted">
                 {props.data.phonetic}
               </span>
