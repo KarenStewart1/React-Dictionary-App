@@ -11,7 +11,7 @@ function App() {
         <footer>
           This project was coded by{" "}
           <a
-            href="https://linkedin.com/in/karenstewartnl"
+            href="https://www.karenstewart.nl"
             target="_blank"
             rel="noreferrer"
           >
